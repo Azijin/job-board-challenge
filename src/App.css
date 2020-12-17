@@ -167,6 +167,13 @@ footer :nth-child(2) img {
     margin-bottom: 35px;
     min-height: 150px;
   }
+  footer > p > a > img {
+    width: 80px;
+  }
+  footer > p > img:first-child,
+  footer > p > img:nth-child(3) {
+    width: 28px;
+  }
 }
 
 @media (min-width: 360px) {
