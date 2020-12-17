@@ -1,38 +1,221 @@
-.App {
-  text-align: center;
+:root {
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: "Roboto", sans-serif;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* HEADER RULES*/
+.header {
+  background-color: #333333;
+  width: 100%;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.header h1 {
+  color: white;
+  font-size: calc(34px * var(--scale));
+  font-weight: 700;
+}
+/*MAIN RULES*/
+main {
+  width: 100%;
+}
+.container {
+  display: flex;
+  overflow-wrap: break-word;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: var(--padding);
+}
+/* JOB RULES*/
+.job {
+  width: 100%;
+  max-width: var(--width);
+  height: 100%;
+  min-height: 300px;
+  border: 10px solid black;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+}
+/* .job:not(3n) {
+  margin-right: 30px;
+} */
+/*.job:nth-child(2),
+.job:nth-child(5),
+.job:nth-child(8) {
+  margin-left: 60px;
+  margin-right: 60px;
+} */
+/*
+.job:nth-child(4),
+.job:nth-child(5),
+.job:nth-child(6) {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+*/
+.job:nth-child(1),
+.job:nth-child(6) {
+  border-color: crimson;
+}
+.job:nth-child(2),
+.job:nth-child(7) {
+  border-color: #55a94f;
+}
+.job:nth-child(3),
+.job:nth-child(8) {
+  border-color: #f4da48;
+}
+.job:nth-child(4),
+.job:nth-child(9) {
+  border-color: #0c88bdc1;
+}
+.job:nth-child(5) {
+  border-color: #f8c5af;
+}
+.job h2 {
+  font-weight: 400;
+  font-size: calc(25px * var(--scale));
+  line-height: 35.16px;
+  padding: 18px 17px 0 17px;
+}
+.job div {
+  padding: 10px 0 19px 17px;
+}
+.job span {
+  font-size: calc(20px * var(--scale));
+  font-weight: 400;
+  line-height: 21.09px;
+}
+/* FOOTER RULES*/
+.footer {
+  background-color: #dddddd;
+  padding: 54px 0;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
 }
-
-.App-link {
-  color: #61dafb;
+.footer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.footer p {
+  font-size: calc(17px * var(--scale));
+}
+.footer div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 10px;
+}
+.footer a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0 5px;
+}
+footer > p > img:first-child,
+footer > p > img:nth-child(3) {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+}
+footer > p > a > img {
+  width: 120px;
+  vertical-align: middle;
+}
+footer :nth-child(2) img {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+}
+.footer div a:link {
+  color: black;
+}
+.footer div a:visited {
+  color: black;
+}
+.footer i {
+  font-family: "Font Awesome 5 Brands" !important;
+  font-size: 24px;
+}
+.footer .fa-linkedin {
+  color: #2566c2;
+}
+.footer .fa-github {
+  color: #242a2e;
+}
+@media (min-width: 360px) {
+  :root {
+    --scale: 0.7;
+    --width: 100%;
+    --padding: 62px 100px;
   }
-  to {
-    transform: rotate(360deg);
+  .job {
+    margin-bottom: 35px;
+    min-height: 150px;
+  }
+}
+
+@media (min-width: 600px) {
+  :root {
+    --scale: 0.7;
+    --width: 100%;
+    --padding: 62px 120px;
+  }
+  .job {
+    margin-bottom: 35px;
+    min-height: 200px;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --scale: 0.8;
+    --width: calc(100% / 2 - (20px));
+    --padding: 62px 100px;
+  }
+  .job {
+    margin-bottom: 35px;
+    min-height: 250px;
+  }
+}
+
+@media (min-width: 992px) {
+  :root {
+    --scale: 0.8;
+    --width: calc(100% / 3 - (30px));
+    --padding: 62px 150px;
+  }
+  .job {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --scale: 1.1;
+    --width: calc(100% / 3 - (30px));
+    --padding: 62px 199px;
+  }
+  .job {
+    margin-bottom: 60px;
+  }
+}
+@media (min-width: 1400px) {
+  :root {
+    --scale: 1.2;
+    --width: calc(100% / 3 - (30px * 2));
+    --padding: 62px 209px;
   }
 }
